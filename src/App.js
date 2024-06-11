@@ -5,6 +5,7 @@ import { VisibilityToggle } from './components/VisibilityToggle';
 import { PersonDetails } from './components/PersonDetails';
 import { TextInput } from './components/TextInput';
 import DigitalClock from './components/DigitalClock';
+import ExampleComponent from './components/ExampleComponent';
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
       <TextInput />
       <hr />
       <h2>19. useEffect() - Creating A Digital Clock Using useEffect()</h2>
-      <DigitalClock/>
+      <DigitalClock />
+      <hr />
+      <h2>20. useEffect() Multiple States & Skipping Effects For Optimization</h2>
+      <ExampleComponent />
       <hr />
     </div>
   );
