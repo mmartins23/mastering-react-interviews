@@ -1,7 +1,15 @@
 import './App.css';
 import UserCard from './components/UserCard';
+import UserInfo from './components/UserInfo';
+
 
 function App() {
+  const user = {
+    name: "Alice",
+    age: 25,
+    location: "Wonderland"
+  };
+
   return (
     <div className="App">
       <h2>33. Introduction</h2>
@@ -9,8 +17,15 @@ function App() {
       <UserCard name="Bob" age={30} />
       <UserCard name="Charlie" age={35} />
       <hr/>
+      <h2>36. Spread Operator</h2>
+      <UserInfo {...user}/>
+      <hr/>
     </div>
   );
 }
 
 export default App;
+
+
+
+
