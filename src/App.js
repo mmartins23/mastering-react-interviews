@@ -1,7 +1,9 @@
 import './App.css';
 import { Counter } from './components/Counter';
 import { Counter2 } from './components/Counter2';
+import { VisibilityToggle } from './components/VisibilityToggle';
 import { PersonDetails } from './components/PersonDetails';
+import {TextInput} from './components/TextInput';
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
       <hr/>
       <h2>11. Basic Event Handling & Parameter Passing</h2>
       <Counter2/>
+      <hr/>
+      <h2>15. Primitive Types with useState()</h2>
+      <VisibilityToggle/>
+      <TextInput/>
       <hr/>
     </div>
   );
