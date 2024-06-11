@@ -8,6 +8,7 @@ import DigitalClock from './components/DigitalClock';
 import ExampleComponent from './components/ExampleComponent';
 import TimerComponent from './components/TimerComponent';
 import FocusInput from './components/FocusInput ';
+import Counter3 from './components/Counter3';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
       <h2>24. useRef() hook</h2>
       <FocusInput />
       <hr />
+      <h2>25. React.memo() & useCallback() hook</h2>
+      <Counter3/>
+      <hr/>
     </div>
   );
 }
