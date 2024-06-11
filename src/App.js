@@ -6,6 +6,7 @@ import { PersonDetails } from './components/PersonDetails';
 import { TextInput } from './components/TextInput';
 import DigitalClock from './components/DigitalClock';
 import ExampleComponent from './components/ExampleComponent';
+import TimerComponent from './components/TimerComponent';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
       <hr />
       <h2>20. useEffect() Multiple States & Skipping Effects For Optimization</h2>
       <ExampleComponent />
+      <hr />
+      <h2>21. Cleaning Up An Effect</h2>
+      <TimerComponent />
       <hr />
     </div>
   );
