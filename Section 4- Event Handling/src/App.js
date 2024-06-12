@@ -1,5 +1,6 @@
 import './App.css';
 import Events from './components/Events';
+import FormMultipleState from './components/FormMultipleState';
 import InputEvent from './components/InputEvent';
 import PreventDefault from './components/PreventDefault';
 
@@ -15,7 +16,10 @@ function App() {
       <hr/>
       <h2>43. preventDefault - Preventing default behavior</h2>
       <PreventDefault/>
-      <br/>
+      <hr/>
+      <h2>44. with Multiple States</h2>
+      <FormMultipleState/>
+      <hr/>
     </div>
   );
 }
