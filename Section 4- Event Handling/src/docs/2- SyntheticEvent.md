@@ -1,3 +1,5 @@
+# What is Synthetic Event in React JS?
+
 In React, a `SyntheticEvent` is a cross-browser wrapper around the native browser event. It is used to provide a consistent API regardless of the browser being used. SyntheticEvents are used for performance reasons and to ensure that events behave consistently across different browsers.
 
 ### Key Features of SyntheticEvent
