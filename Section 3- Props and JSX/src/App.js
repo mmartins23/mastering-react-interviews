@@ -1,5 +1,6 @@
 import './App.css';
 import Card from './components/Card';
+import List from './components/List';
 import UserCard from './components/UserCard';
 import UserInfo from './components/UserInfo';
 
@@ -27,6 +28,9 @@ function App() {
         <p>This is a card component</p>
       </Card>
       <hr />
+      <h2>38. ReactFragment</h2>
+      <List/>
+      <hr/>
     </div>
   );
 }
