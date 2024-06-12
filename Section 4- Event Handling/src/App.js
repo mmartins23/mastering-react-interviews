@@ -1,5 +1,7 @@
 import './App.css';
 import Events from './components/Events';
+import InputEvent from './components/InputEvent';
+
 
 function App() {
   return (
@@ -7,6 +9,9 @@ function App() {
       <h2>Events</h2>
       <Events />
       <hr />
+      <h2>Input Event</h2>
+      <InputEvent/>
+      <hr/>
     </div>
   );
 }
