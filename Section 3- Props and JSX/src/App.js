@@ -1,4 +1,5 @@
 import './App.css';
+import Card from './components/Card';
 import UserCard from './components/UserCard';
 import UserInfo from './components/UserInfo';
 
@@ -16,10 +17,16 @@ function App() {
       <UserCard name="Alice" age={25} />
       <UserCard name="Bob" age={30} />
       <UserCard name="Charlie" age={35} />
-      <hr/>
+      <hr />
       <h2>36. Spread Operator</h2>
-      <UserInfo {...user}/>
-      <hr/>
+      <UserInfo {...user} />
+      <hr />
+      <h2>37. props.children property</h2>
+      <Card>
+        <h2>Hello</h2>
+        <p>This is a card component</p>
+      </Card>
+      <hr />
     </div>
   );
 }
