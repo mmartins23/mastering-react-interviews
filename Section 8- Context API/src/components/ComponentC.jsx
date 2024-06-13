@@ -1,6 +1,10 @@
 import styles from './ComponentC.module.css';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 
-const ComponentC = ({ data }) => {
+const ComponentC = () => {
+  const data = useContext(DataContext);
+
   return (
     <div className={styles.container}>
       Component C: {data}
