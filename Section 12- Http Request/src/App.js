@@ -1,21 +1,32 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import User from './components/User';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [error, setError] = useState(null);
 
   const fetchUsers = () => {
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => { setUsers(json) })
-  }
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(json => {
+        setUsers(json);
+        setError(null); // Clear any previous errors
+      })
+      .catch(error => setError(error.message));
+  };
 
   return (
     <div className="App">
       <button onClick={fetchUsers}>Get Users</button>
-      {users.map((user, index) => (
-        <User user={user} key={index}/>
+      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+      {users.map(user => (
+        <User user={user} key={user.id} />
       ))}
     </div>
   );
