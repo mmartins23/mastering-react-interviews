@@ -2,6 +2,7 @@ import './App.css';
 import ButtonClickExample from './components/ButtonClickExample';
 import Counter from './components/Counter';
 import Greeting from './components/Greeting';
+import InputHandler from './components/InputHandler';
 import MouseClickExample from './components/MouseClickExample';
 import Products from './components/Products';
 
@@ -21,6 +22,9 @@ function App() {
       <h3>125. onClick - Event Handling with TypeScript</h3>
       <MouseClickExample/>
       <ButtonClickExample/>
+      <hr/>
+      <h3>126. onChange - EventHandling with TypeScript</h3>
+      <InputHandler/>
       <hr/>
     </div>
   );
