@@ -1,6 +1,8 @@
 import './App.css';
+import ButtonClickExample from './components/ButtonClickExample';
 import Counter from './components/Counter';
 import Greeting from './components/Greeting';
+import MouseClickExample from './components/MouseClickExample';
 import Products from './components/Products';
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
       <hr />
       <h3>124. useState() with TypeScript</h3>
       <Counter/>
+      <hr/>
+      <h3>125. onClick - Event Handling with TypeScript</h3>
+      <MouseClickExample/>
+      <ButtonClickExample/>
       <hr/>
     </div>
   );
