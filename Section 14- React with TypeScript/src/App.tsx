@@ -2,6 +2,7 @@ import './App.css';
 import ButtonClickExample from './components/ButtonClickExample';
 import Counter from './components/Counter';
 import Dropdown from './components/Dropdown';
+import FocusInput from './components/FocusInput';
 import Greeting from './components/Greeting';
 import InputHandler from './components/InputHandler';
 import MouseClickExample from './components/MouseClickExample';
@@ -29,6 +30,9 @@ function App() {
       <hr/>
       <h3>127. select - Working with Dropdown</h3>
       <Dropdown/>
+      <hr/>
+      <h3>128. useRef() with TypeScript</h3>
+      <FocusInput/>
       <hr/>
     </div>
   );
