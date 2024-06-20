@@ -6,6 +6,7 @@ const Counter = () => {
         <div>
             <h3 data-testid="cnt">{counter}</h3>
             <button data-testid="btn" onClick={() => setCounter(prevCounter => prevCounter + 1)}>Increment</button>
+            <input type="text" data-testid="input" defaultValue="10"/>
         </div>
     )
 }
