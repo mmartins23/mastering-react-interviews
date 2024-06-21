@@ -3,9 +3,11 @@ import {fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Counter from './Counter';
 
+beforeEach(() => {
+    render(<Counter/>)
+})
 
 test('Initial value of counter should be 0', () => {
-    render(<Counter/>);
     const counterEl = screen.getByTestId("cnt");
     expect(counterEl).toBeInTheDocument();
     expect(counterEl).not.toBeNull();
@@ -21,7 +23,6 @@ test('Initial value of counter should be 0', () => {
 // })
 
 test('On click, it should increment by 1 using userEvent', async () => {
-    render(<Counter />);
     const btnEl = screen.getByTestId("btn");
     const counterEl = screen.getByTestId("cnt");
     expect(counterEl.textContent).toBe("0");
@@ -30,13 +31,11 @@ test('On click, it should increment by 1 using userEvent', async () => {
 });
 
 test("Input should have 10 as initial value", () => {
-    render(<Counter/>);
     const inputEl = screen.getByTestId("input");
     expect(inputEl.value).toBe("10");
 })
 
 test("Entering value in input works", () => {
-    render(<Counter/>);
     const inputEl = screen.getByTestId("input");
     fireEvent.change(inputEl, {
         target: {
