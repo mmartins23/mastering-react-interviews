@@ -1,10 +1,7 @@
+import {useSelector} from 'react-redux';
+
 const Purchase = () => {
-    const products = [
-        { pName: 'Apple', price: 20 },
-        { pName: 'Banana', price: 3 },
-        { pName: 'Orange', price: 10 },
-        { pName: 'Grapes', price: 8 },
-    ]
+    const products = useSelector(state => state.products);
     return (
         <div className="customDiv">
             <h3>Purchase Component</h3>
