@@ -12,3 +12,7 @@ select {
   font-size: large;
   width: 200px;
 }
+
+li {
+  cursor: pointer;
+}
