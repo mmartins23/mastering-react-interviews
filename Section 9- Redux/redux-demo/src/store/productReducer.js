@@ -1,5 +1,3 @@
-import { createStore } from "redux"
-
 const initData = {
     products: [
         { pName: 'Apple', price: 20 },
@@ -10,10 +8,8 @@ const initData = {
     ],
     cart: [],
     total: 0,
-    users: ['admin', 'manager', 'end-user'],
-    loginDet: 'None'
 }
-const reducer = (state = initData, action) => {
+const productReducer = (state = initData, action) => {
     if (action.type === 'PURCHASE') {
         return {
             ...state,
@@ -30,16 +26,7 @@ const reducer = (state = initData, action) => {
         }
 
     }
-
-    if (action.type === 'LOGIN') {
-        return {
-            ...state,
-            loginDet: action.loginDet
-        }
-
-    }
     return state;
 }
-const store = createStore(reducer);
 
-export default store;
+export default productReducer;

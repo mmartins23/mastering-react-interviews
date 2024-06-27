@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 
 const Purchase = () => {
-    const products = useSelector(state => state.products);
-    const loginDet = useSelector(state => state.loginDet);
+    const products = useSelector(state => state.pr.products);
+    const loginDet = useSelector(state => state.lr.loginDet);
     const dispatch = useDispatch();
 
     const purchaseHandler = (e) => {

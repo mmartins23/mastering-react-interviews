@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 
 
 const Total = () => {
-    const total = useSelector(state => state.total);
-    const loginDet = useSelector(state => state.loginDet);
+    const total = useSelector(state => state.pr.total);
+    const loginDet = useSelector(state => state.lr.loginDet);
 
     return (
         <div className="customDiv">
