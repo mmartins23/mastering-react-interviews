@@ -1,3 +1,5 @@
+import * as actions from './actions';
+
 const initData = {
     products: [
         { pName: 'Apple', price: 20 },
@@ -10,7 +12,7 @@ const initData = {
     total: 0,
 }
 const productReducer = (state = initData, action) => {
-    if (action.type === 'PURCHASE') {
+    if (action.type === actions.PURCHASE) {
         return {
             ...state,
             cart: [...state.cart, action.payLoad],
