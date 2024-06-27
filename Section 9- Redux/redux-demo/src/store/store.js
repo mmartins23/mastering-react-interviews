@@ -9,7 +9,9 @@ const initData = {
         { pName: 'Mango', price: 45 }
     ],
     cart: [],
-    total: 0
+    total: 0,
+    users: ['admin', 'manager', 'end-user'],
+    loginDet: 'None'
 }
 const reducer = (state = initData, action) => {
     if (action.type === 'PURCHASE') {
@@ -25,6 +27,14 @@ const reducer = (state = initData, action) => {
             ...state,
             cart: state.cart.filter((i, index) => index !== action.payLoad.index),
             total: state.total - action.payLoad.price
+        }
+
+    }
+
+    if (action.type === 'LOGIN') {
+        return {
+            ...state,
+            loginDet: action.loginDet
         }
 
     }

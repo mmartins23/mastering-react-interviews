@@ -3,15 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Cart = () => {
     const cart = useSelector(state => state.cart);
+    const loginDet = useSelector(state => state.loginDet);
     const dispatch = useDispatch();
 
     const deleteHandler = (index, price) => {
-        dispatch({ type: 'DELETE', payLoad: {index, price} })
+        dispatch({ type: 'DELETE', payLoad: { index, price } })
     }
 
     return (
         <div className="customDiv">
-            <h3>Cart Component</h3>
+            <h3>Cart Component - User:- {loginDet}</h3>
             <hr />
             <ul>
                 {
