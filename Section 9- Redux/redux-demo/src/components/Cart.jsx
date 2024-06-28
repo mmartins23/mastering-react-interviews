@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { deleteItem } from '../store/productSlice';
+
 
 
 const Cart = () => {
@@ -7,7 +9,8 @@ const Cart = () => {
     const dispatch = useDispatch();
 
     const deleteHandler = (index, price) => {
-        dispatch({ type: 'DELETE', payLoad: { index, price } })
+        //dispatch({ type: 'DELETE', payLoad: { index, price } })
+        dispatch(deleteItem({index, price}))
     }
 
     return (

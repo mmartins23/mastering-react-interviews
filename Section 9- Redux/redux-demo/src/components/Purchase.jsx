@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { purchase } from "../store/productSlice";
 
 const Purchase = () => {
     const products = useSelector(state => state.pr.products);
@@ -9,7 +10,8 @@ const Purchase = () => {
         let pName = e.target.options[e.target.selectedIndex].text;
         let price = e.target.value;
         let obj = { pName, price };
-        dispatch({ type: 'PURCHASE', payLoad: obj });
+        // dispatch({ type: 'PURCHASE', payLoad: obj });
+        dispatch(purchase(obj));
     }
     return (
         <div className="customDiv">

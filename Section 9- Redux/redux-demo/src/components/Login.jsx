@@ -1,10 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
+import { userLogin } from "../store/loginSlice";
+
 const Login = () => {
     const users = useSelector(state => state.lr.users);
     const dispatch = useDispatch();
     const loginHandler = (e) => {
         let loginDet = e.target.options[e.target.selectedIndex].text;
-        dispatch({ type: 'LOGIN', loginDet: loginDet });
+        // dispatch({ type: 'LOGIN', loginDet: loginDet });
+        dispatch(userLogin(loginDet));
     }
 
     return (
